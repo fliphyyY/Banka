@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    cout << "skusam 2 ";
+    cout << "  ";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
