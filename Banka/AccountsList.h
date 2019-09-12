@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "Ucet.h"
-
+#include <iostream>
 
 using namespace std;
 class AccountsList
@@ -19,6 +19,7 @@ public:
 
 	AccountsList();
 	void pridajUcet(Ucet u);
+	void vypisUcty();
 
 
 	

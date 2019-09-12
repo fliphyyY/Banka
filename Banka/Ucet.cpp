@@ -26,3 +26,8 @@ Ucet::Ucet(unsigned short int typ_, unsigned int cislo_, string meno_, string pr
 	this->mena = mena_;
 	this->sadzba = sadzba_;
 }
+
+string Ucet::getMeno()
+{
+	return this->meno;
+}
