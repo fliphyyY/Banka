@@ -21,9 +21,15 @@
     <ClCompile Include="AccountsList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ucet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountsList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ucet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
