@@ -6,7 +6,7 @@ using namespace std;
 class Ucet
 {
 
-	enum typ
+	enum  typ 
 	{
 		bezny = 1,
 		sporiaci = 2,
@@ -18,15 +18,24 @@ class Ucet
 	};
 
 private:
+
+	unsigned short int typ;
 	unsigned int cislo;
 	string meno;
 	string priezvisko;
-	unsigned zostatok;
+	unsigned int zostatok;
 	string mena;
 	unsigned int pocetOperacii;
 	double sadzba;
 	double periodicita;
 	double dobaDixacie;
+
+public :
+
+	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
+		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_);
+	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
+		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_, double sadzba_);
 
 
 
