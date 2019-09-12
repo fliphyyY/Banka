@@ -7,6 +7,10 @@ using namespace std;
 class Ucet
 {
 
+
+
+	
+
 	enum  typ 
 	{
 		bezny = 1,
@@ -17,6 +21,9 @@ class Ucet
 
 
 	};
+
+
+
 
 private:
 
@@ -36,12 +43,16 @@ public :
 
 	Ucet() = default;
 	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
-		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_);
-	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
-		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_, double sadzba_);
+		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_,  );
+
 	string getMeno();
 
 
 
+	
+
+
 };
+
+
 

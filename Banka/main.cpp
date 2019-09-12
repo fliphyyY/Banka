@@ -7,7 +7,10 @@
 
 int main()
 {
+
+	
 	Ucet u;
+	
 	AccountsList *zoznam = new AccountsList();
 	cout << "Vitajte v menu" << endl;
 	cout << "1 Vytvorenie uctu" << endl;
@@ -25,6 +28,8 @@ int main()
 			cout << "Zadaj priezvisko: ";
 			cin >> priezvisko;
 			zoznam->pridajUcet(Ucet (1, 2, meno, priezvisko, 0, "CZ", 1));
+			
+
 			
 		}
 
