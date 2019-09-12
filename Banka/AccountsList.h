@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Ucet.h"
+#include "Terminovany.h"
 #include <iostream>
 
 
@@ -14,13 +15,13 @@ private:
 
 	string meno;
 	Ucet u;
-	vector <Ucet> zoznamUctov;
+	vector <Ucet*> zoznamUctov;
 
 public:
 
 
 	AccountsList();
-	void pridajUcet(Ucet u);
+	void pridajUcet(Ucet *u);
 	void vypisUcty();
 
 

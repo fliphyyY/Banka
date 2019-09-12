@@ -152,11 +152,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AccountsList.cpp" />
+    <ClCompile Include="Hypotekarny.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Osobny.cpp" />
+    <ClCompile Include="Sporiaci.cpp" />
+    <ClCompile Include="Terminovany.cpp" />
     <ClCompile Include="Ucet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountsList.h" />
+    <ClInclude Include="Hypotekarny.h" />
+    <ClInclude Include="Osobny.h" />
+    <ClInclude Include="Sporiaci.h" />
+    <ClInclude Include="Terminovany.h" />
     <ClInclude Include="Ucet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
