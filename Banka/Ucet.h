@@ -3,6 +3,7 @@
 
 
 using namespace std;
+
 class Ucet
 {
 
@@ -29,9 +30,11 @@ private:
 	double sadzba;
 	double periodicita;
 	double dobaDixacie;
+	
 
 public :
 
+	Ucet() = default;
 	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
 		string priezvisko_, unsigned int zostatok_, string mena_, unsigned int pocetOperacii_);
 	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,

@@ -1,15 +1,27 @@
 #pragma once
 #include <vector>
 #include "Ucet.h"
+
+
 using namespace std;
 class AccountsList
 {
 
 private:
-	vector<Ucet> zoznamUctov;
+
+
+	string meno;
+	Ucet u;
+	vector <Ucet> zoznamUctov;
 
 public:
-	void pridajUcet(Ucet ucet);
+
+
+	AccountsList();
+	void pridajUcet(Ucet u);
+
+
+	
 
 };
 

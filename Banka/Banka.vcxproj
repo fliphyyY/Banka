@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AccountsList.cpp" />
-    <ClCompile Include="Banka.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Ucet.cpp" />
   </ItemGroup>
   <ItemGroup>
