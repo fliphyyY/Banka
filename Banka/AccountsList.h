@@ -27,6 +27,8 @@ public:
 	AccountsList();
 	void pridajUcet(Ucet *u);
 	void vypisUcty();
+	bool zrusUcet(int cislo);
+	bool vlozPeniaze(int cislo, int suma);
 
 
 	

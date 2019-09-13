@@ -1,6 +1,6 @@
 #include "Osobny.h"
 
-int Osobny::getOperacie()
+unsigned int Osobny::getOperacie()
 {
 	return this->operacie;
 }

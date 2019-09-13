@@ -26,7 +26,7 @@ Ucet::typUctu Ucet::getTyp()
 	return this->typ;
 }
 
-unsigned int Ucet::getCislo()
+ int Ucet::getCislo()
 {
 	return this->cislo;
 }
@@ -72,12 +72,15 @@ Ucet::currency Ucet::getMena()
 
 Ucet::currency Ucet::vyberMeny()
 {
+	cout << endl;
 	int volba;
 	cout << "1. EUR " << endl;
 	cout << "2. CZK " << endl;
 	cout << "3. GBP " << endl;
 	cout << "4. USD " << endl;
 	cout << "5. RUB " << endl;
+	cout << endl;
+	cout << "Zadajte menu: ";
 	cin >> volba;
 
 	if (volba == 1)

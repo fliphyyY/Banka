@@ -41,7 +41,7 @@ public :
 
 
 	virtual typUctu getTyp();
-	virtual unsigned int getCislo();
+	virtual  int getCislo();
 	virtual string getMeno();
 	virtual string getPriezvisko();
 	virtual float zadajSadzbu();
