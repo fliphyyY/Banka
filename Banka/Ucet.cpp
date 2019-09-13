@@ -3,7 +3,7 @@
 
 
 
-Ucet::Ucet(unsigned short int typ_, unsigned int cislo_, string meno_, string priezvisko_, unsigned int zostatok_, string mena_)
+Ucet::Ucet(typUctu typ_, unsigned int cislo_, string meno_, string priezvisko_, unsigned int zostatok_, string mena_)
 {
 
 

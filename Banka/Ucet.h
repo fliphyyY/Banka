@@ -9,42 +9,24 @@ class Ucet
 {
 
 
+public :
 
-	
 
-	enum  typ 
+
+	enum  typUctu
 	{
-		bezny = 1,
-		sporiaci = 2,
-		terminovany = 3,
-		hypotekarny= 4,
+		bezny ,
+		sporiaci,
+		terminovany,
+		hypotekarny,
 
 
 
 	};
 
-
-
-
-protected:
-	
-	unsigned short int typ;
-	unsigned int cislo;
-	string meno;
-	string priezvisko;
-	unsigned int zostatok;
-	string mena;
-	
-	
-
-public :
-
-
-	
 	Ucet() = default;
-	Ucet(unsigned short int typ_, unsigned int cislo_, string meno_,
+	Ucet(typUctu typ_, unsigned int cislo_, string meno_,
 		string priezvisko_, unsigned int zostatok_, string mena_);
-
 
 
 	virtual unsigned short int getTyp();
@@ -55,6 +37,24 @@ public :
 	virtual unsigned int getZostatok();
 
 	virtual string getMena();
+
+
+	
+
+protected:
+
+	//	unsigned short int typ;
+
+	typUctu typ;
+	unsigned int cislo;
+	string meno;
+	string priezvisko;
+	unsigned int zostatok;
+	string mena;
+
+
+	
+
 	
 
 	

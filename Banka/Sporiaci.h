@@ -16,7 +16,7 @@ public:
 
 
 
-	Sporiaci(unsigned short int typ_, unsigned int cislo_, string meno_,
+	Sporiaci(typUctu typ_ , unsigned int cislo_, string meno_,
 		string priezvisko_, unsigned int zostatok_, string mena_, double sadzba_) :Ucet(typ_, cislo_, meno_, priezvisko_
 		, zostatok_, mena_)
 	{

@@ -23,6 +23,8 @@ void AccountsList::vypisUcty()
 		cout << var->getTyp() << endl;
 		cout << var->getMeno() << endl;
 		cout << var->getPriezvisko() << endl;
+		cout << var->getZostatok() << endl;
+		cout << var->getMena() << endl;
 		if (var->getTyp() == 3)
 		{
 			Terminovany* t = static_cast<Terminovany*>(var);
