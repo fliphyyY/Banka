@@ -43,7 +43,7 @@ public :
 	virtual unsigned int getCislo();
 	virtual string getMeno();
 	virtual string getPriezvisko();
-
+	virtual float zadajSadzbu();
 	virtual unsigned int getZostatok();
 
 	virtual currency getMena();

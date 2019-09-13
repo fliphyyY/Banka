@@ -21,13 +21,20 @@ void AccountsList::vypisUcty()
 
 	
 		cout << var->getTyp() << endl;
+		cout << var->cisloUctu() << endl;
 		cout << var->getMeno() << endl;
 		cout << var->getPriezvisko() << endl;
 		cout << var->getZostatok() << endl;
 		cout << var->getMena() << endl;
-		if (var->getTyp() == 3)
+		if (var->getTyp() == u.bezny)
 		{
-			Terminovany* t = static_cast<Terminovany*>(var);
+			Osobny *t = static_cast<Osobny*>(var);
+			cout << t->getOperacie()<< endl;
+		}
+
+		else if (var->getTyp() == u.sporiaci)
+		{
+			Sporiaci* t = static_cast<Sporiaci*>(var);
 			cout << t->getSadzba() << endl;
 		}
 	}

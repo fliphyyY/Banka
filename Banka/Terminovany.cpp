@@ -1,6 +1,6 @@
 #include "Terminovany.h"
 
-double Terminovany::getSadzba()
+float Terminovany::getSadzba()
 {
 	return this->sadzba;
 }

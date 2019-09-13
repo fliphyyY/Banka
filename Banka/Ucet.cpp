@@ -41,6 +41,15 @@ string Ucet::getPriezvisko()
 	return this->priezvisko;
 }
 
+float Ucet::zadajSadzbu()
+{
+	float sadzba;
+	cout << "Zadajte urokovu sadzbu: ";
+	cin >> sadzba;
+
+	return sadzba;
+}
+
 unsigned int Ucet::getZostatok()
 {
 	return this->zostatok;

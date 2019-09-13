@@ -25,6 +25,9 @@ int main()
 		if (klavesnica == 1)
 		{
 			int typ ;
+			
+		
+			
 			string meno;
 			string priezvisko;
 			
@@ -42,19 +45,27 @@ int main()
 			{
 
 				
-				zoznam->pridajUcet(new Osobny(u.bezny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1));
+				zoznam->pridajUcet(new Osobny(u.bezny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 0));
 			}
 			 else if (typ == 2)
 			{
-				zoznam->pridajUcet(new Sporiaci(u.sporiaci, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 6));
+				
+				zoznam->pridajUcet(new Sporiaci(u.sporiaci, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu()));
 			}
-			if (typ == 3)
+			if (typ == 3)	
 			{
-				zoznam->pridajUcet(new Terminovany(u.terminovany, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1,5));
+
+				int periodicita;
+				cout << "Zadajte periodicitu pripisovania urokov: ";
+				cin >> periodicita;
+				zoznam->pridajUcet(new Terminovany(u.terminovany, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu(),periodicita));
 			}
 			if (typ == 4)
 			{
-				zoznam->pridajUcet(new Hypotekarny(u.hypotekarny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1,5));
+				int fixacia;
+				cout << "Zadajte dobu fixacie: ";
+				cin >> fixacia;
+				zoznam->pridajUcet(new Hypotekarny(u.hypotekarny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu(),fixacia));
 			}
 			
 			

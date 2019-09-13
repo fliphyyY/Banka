@@ -2,6 +2,9 @@
 #include <vector>
 #include "Ucet.h"
 #include "Terminovany.h"
+#include "Osobny.h"
+#include "Hypotekarny.h"
+#include "Sporiaci.h"
 #include <iostream>
 
 

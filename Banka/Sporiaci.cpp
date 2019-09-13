@@ -1,6 +1,8 @@
 #include "Sporiaci.h"
 
-string Sporiaci::getMeno()
+
+
+float Sporiaci::getSadzba()
 {
-	return this->meno;
+	return this->sadzba;
 }
