@@ -56,5 +56,8 @@
     <ClInclude Include="Osobny.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="magic_enum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

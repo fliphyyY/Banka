@@ -104,6 +104,8 @@ Ucet::currency Ucet::vyberMeny()
 	{
 		return RUB;
 	}
+
+	
 }
 
 

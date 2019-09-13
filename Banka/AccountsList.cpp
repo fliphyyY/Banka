@@ -18,39 +18,40 @@ void AccountsList::vypisUcty()
 
 	for  (Ucet* var : zoznamUctov)
 	{ 
-
 	
-		cout << var->getTyp() << endl;
-		cout << var->cisloUctu() << endl;
-		cout << var->getMeno() << endl;
-		cout << var->getPriezvisko() << endl;
-		cout << var->getZostatok() << endl;
-		cout << var->getMena() << endl;
+		auto typUctu = enum_name(var->getTyp());
+		cout << typUctu << endl;
+		cout <<"Cislo uctu je: "<<var->cisloUctu() << endl;
+		cout <<"Meno majitela: "<< var->getMeno() << endl;
+		cout <<"Priezvisko majitela: " << var->getPriezvisko() << endl;
+		auto nazovMeny = enum_name(var->getMena());
+		cout <<"Zostatok na ucte: "<< var->getZostatok()<< " " << nazovMeny << endl;
+		cout <<"Ucet je vedeny v mene: "<< var->getMena() << endl;
 		if (var->getTyp() == u.bezny)
 		{
 			Osobny *t = static_cast<Osobny*>(var);
-			cout << t->getOperacie()<< endl;
+			cout <<"Pocet operacii: "<< t->getOperacie()<< endl;
 		}
 
 		else if (var->getTyp() == u.sporiaci)
 		{
 			Sporiaci* t = static_cast<Sporiaci*>(var);
-			cout << t->getSadzba() << endl;
+			cout <<"Vysko urokovej sadzby: " <<  t->getSadzba() <<" %" << endl;
 		}
 
 		else if (var->getTyp() == u.terminovany)
 		{
 			Terminovany* t = static_cast<Terminovany*>(var);
-			cout << t->getSadzba() << endl;
-			cout << t->getPeriodicita();
+			cout << "Vysko urokovej sadzby: " << t->getSadzba() << " %" << endl;
+			cout <<"Periodicita pripisovania urokov v tyzdnoch: " <<  t->getPeriodicita() << endl;
 			
 		}
 
 		else if (var->getTyp() == u.hypotekarny)
 		{
 			Hypotekarny* t = static_cast<Hypotekarny*>(var);
-			cout << t->getSadzba() << endl;
-			cout << t->getFixacia() << endl;
+			cout << "Vysko urokovej sadzby: " << t->getSadzba() << " %" << endl;
+			cout <<"Doba fixacie je: "<< t->getFixacia() << " mesiacov."<<endl;
 		}
 	}
 

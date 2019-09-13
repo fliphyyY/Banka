@@ -2,8 +2,9 @@
 #include <string>
 #include <random>
 #include <iostream>
+#include "magic_enum.hpp"
 
-
+using namespace magic_enum;
 using namespace std;
 
 class Ucet

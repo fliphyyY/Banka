@@ -16,8 +16,10 @@ int main()
 
 	
 	AccountsList *zoznam = new AccountsList();
-	cout << "Vitajte v menu" << endl;
-	cout << "1 Vytvorenie uctu" << endl;
+	cout << "------------------------------------------Vitajte v menu-------------------------------------------" << endl;
+	cout << "1. Vytvorenie uctu" << endl;
+	cout << "6. Vypis vsetkych uctov" << endl;
+	cout << "Vasa volba: ";
 	int klavesnica;
 	cin >> klavesnica;
 	while (klavesnica != 7)
@@ -31,7 +33,10 @@ int main()
 			string meno;
 			string priezvisko;
 			
-
+			cout << "1. Bezny ucet" << endl;
+			cout << "2. Sporiaci ucet" << endl;
+			cout << "3. Terminovany ucet" << endl;
+			cout << "4. Hypotekarny ucet" << endl;
 			cout << "Zadaj typ: ";
 			cin >> typ;
 
@@ -73,7 +78,7 @@ int main()
 			
 		}
 
-		if (klavesnica == 2)
+		if (klavesnica == 6)
 		{
 			zoznam->vypisUcty();
 		}
