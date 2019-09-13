@@ -27,7 +27,7 @@ int main()
 			int typ ;
 			string meno;
 			string priezvisko;
-			string mena;
+			
 
 			cout << "Zadaj typ: ";
 			cin >> typ;
@@ -40,19 +40,21 @@ int main()
 
 			if (typ == 1)
 			{
-				zoznam->pridajUcet(new Osobny(u.bezny, 2, meno, priezvisko, 0, "CZ", 1));
+
+				
+				zoznam->pridajUcet(new Osobny(u.bezny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1));
 			}
 			 else if (typ == 2)
 			{
-				zoznam->pridajUcet(new Sporiaci(u.sporiaci, 2, meno, priezvisko, 0, "CZ", 6));
+				zoznam->pridajUcet(new Sporiaci(u.sporiaci, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 6));
 			}
 			if (typ == 3)
 			{
-				zoznam->pridajUcet(new Terminovany(u.terminovany, 2, meno, priezvisko, 0, "CZ", 1,5));
+				zoznam->pridajUcet(new Terminovany(u.terminovany, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1,5));
 			}
 			if (typ == 4)
 			{
-				zoznam->pridajUcet(new Hypotekarny(u.hypotekarny, 2, meno, priezvisko, 0, "CZ", 1,5));
+				zoznam->pridajUcet(new Hypotekarny(u.hypotekarny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 1,5));
 			}
 			
 			

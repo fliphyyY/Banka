@@ -16,8 +16,8 @@ public:
 
 
 
-	Terminovany(typUctu  typ_, unsigned int cislo_, string meno_,
-		string priezvisko_, unsigned int zostatok_, string mena_, double sadzba_, int periodicita_) :Ucet(typ_, cislo_, meno_, priezvisko_
+	Terminovany(typUctu  typ_,  int cislo_, string meno_,
+		string priezvisko_, unsigned int zostatok_, currency mena_, double sadzba_, int periodicita_) :Ucet(typ_, cislo_, meno_, priezvisko_
 			, zostatok_, mena_)
 	{
 		this->preriodicita = periodicita_;

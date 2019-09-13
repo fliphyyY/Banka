@@ -1,9 +1,12 @@
 #include "Ucet.h"
 
 
+#define CISLO_MIN 1000000000
+#define CISLO_MAX 2147483647
 
 
-Ucet::Ucet(typUctu typ_, unsigned int cislo_, string meno_, string priezvisko_, unsigned int zostatok_, string mena_)
+Ucet::Ucet(typUctu typ_,  int cislo_, string meno_,
+	string priezvisko_, unsigned int zostatok_, currency mena_)
 {
 
 
@@ -16,7 +19,9 @@ Ucet::Ucet(typUctu typ_, unsigned int cislo_, string meno_, string priezvisko_, 
 	
 }
 
-unsigned short int Ucet::getTyp()
+
+
+Ucet::typUctu Ucet::getTyp()
 {
 	return this->typ;
 }
@@ -41,9 +46,55 @@ unsigned int Ucet::getZostatok()
 	return this->zostatok;
 }
 
-string Ucet::getMena()
+Ucet::currency Ucet::getMena()
 {
 	return this->mena;
+}
+
+
+ int Ucet::cisloUctu()
+{
+	mt19937 rng(random_device{}());
+	uniform_int_distribution<> dist(CISLO_MIN, CISLO_MAX);
+
+	auto random_number = dist(rng);
+	return random_number;
+}
+
+Ucet::currency Ucet::vyberMeny()
+{
+	int volba;
+	cout << "1. EUR " << endl;
+	cout << "2. CZK " << endl;
+	cout << "3. GBP " << endl;
+	cout << "4. USD " << endl;
+	cout << "5. RUB " << endl;
+	cin >> volba;
+
+	if (volba == 1)
+	{
+		return EUR;
+	}
+
+	else if (volba == 2)
+	{
+		return CZK;
+	}	
+
+	else if (volba == 3)
+	{
+		return GBP;
+	}
+
+	else if (volba == 4)
+	{
+		return USD;
+	}
+
+	else if (volba == 5)
+	{
+		return RUB;
+	}
 }
 
 

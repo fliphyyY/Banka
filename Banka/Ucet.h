@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-
+#include <random>
+#include <iostream>
 
 
 using namespace std;
@@ -11,7 +12,16 @@ class Ucet
 
 public :
 
+	enum currency
+	{
+		EUR,
+		CZK,
+		GBP,
+		USD,
+		RUB,
 
+
+	};
 
 	enum  typUctu
 	{
@@ -25,32 +35,34 @@ public :
 	};
 
 	Ucet() = default;
-	Ucet(typUctu typ_, unsigned int cislo_, string meno_,
-		string priezvisko_, unsigned int zostatok_, string mena_);
+	Ucet(typUctu typ_,  int cislo_, string meno_,
+		string priezvisko_, unsigned int zostatok_, currency mena_);
 
 
-	virtual unsigned short int getTyp();
+	virtual typUctu getTyp();
 	virtual unsigned int getCislo();
 	virtual string getMeno();
 	virtual string getPriezvisko();
 
 	virtual unsigned int getZostatok();
 
-	virtual string getMena();
+	virtual currency getMena();
 
+	 int cisloUctu();
 
+	currency vyberMeny();
+	
 	
 
 protected:
 
 	//	unsigned short int typ;
-
 	typUctu typ;
 	unsigned int cislo;
 	string meno;
 	string priezvisko;
 	unsigned int zostatok;
-	string mena;
+	currency mena;
 
 
 	
