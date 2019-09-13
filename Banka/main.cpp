@@ -23,6 +23,8 @@ int main()
 		cout << "------------------------------------------Vitajte v menu-------------------------------------------" << endl;
 		cout << "1. Vytvorenie uctu" << endl;
 		cout << "2. Zrusenie uctu" << endl;
+		cout << "3. Vklad na ucet" << endl;
+		cout << "4. Vyber z uctu" << endl;
 		cout << "6. Vypis vsetkych uctov" << endl;
 		cout << "Vasa volba: ";		
 		cin >> klavesnica;
@@ -56,7 +58,7 @@ int main()
 				zoznam->pridajUcet(new Osobny(u.bezny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), 0));
 				system("cls");
 				cout << endl;
-				cout << "Bankovu ucet bol uspesne vytvoreny" << endl;
+				cout << "Bankovy ucet bol uspesne vytvoreny" << endl;
 				
 			}
 			 else if (typ == 2)
@@ -65,7 +67,7 @@ int main()
 				zoznam->pridajUcet(new Sporiaci(u.sporiaci, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu()));
 				system("cls");
 				cout << endl;
-				cout << "Bankovu ucet bol uspesne vytvoreny" << endl;
+				cout << "Bankovy ucet bol uspesne vytvoreny" << endl;
 			}
 			if (typ == 3)	
 			{
@@ -76,7 +78,7 @@ int main()
 				zoznam->pridajUcet(new Terminovany(u.terminovany, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu(),periodicita));
 				system("cls");
 				cout << endl;
-				cout << "Bankovu ucet bol uspesne vytvoreny" << endl;
+				cout << "Bankovy ucet bol uspesne vytvoreny" << endl;
 			}
 			if (typ == 4)
 			{
@@ -86,7 +88,7 @@ int main()
 				zoznam->pridajUcet(new Hypotekarny(u.hypotekarny, u.cisloUctu(), meno, priezvisko, 0, u.vyberMeny(), u.zadajSadzbu(),fixacia));
 				system("cls");
 				cout << endl;
-				cout << "Bankovu ucet bol uspesne vytvoreny" << endl;
+				cout << "Bankovy ucet bol uspesne vytvoreny" << endl;
 			}
 			
 			
@@ -104,18 +106,43 @@ int main()
 			cin >> cislo;
 			if (zoznam->zrusUcet(cislo))
 			{
-				cout << "Ucet bol uspesne vymazany !" << endl;
+				cout << "Zmazanie uctu bolo uspesne !" << endl;
 			}
-
+			
 			else
 			{
-				cout << "Ucet sa nepodarilo vymazat !" << endl;
+				cout << "Zmazanie uctu nebolo uspesne !" << endl;
 			}
+			
 		}
 
 		else if (klavesnica == 3)
 		{
+			int cislo;
+			int suma;
+			system("cls");
+			cout << endl;
+			zoznam->vypisUcty();
+		
+			cout << "Zadajte cislo uctu na ktory chcete vlozit peniaze: ";			
+			cin >> cislo;
+			cout << "Zadajte sumu ktoru chcete vlozit na ucet: ";
+			cin >> suma;
+			if(zoznam->vlozPeniaze(cislo, suma))
+			{
+				cout << "Vklad bol uspesny !" << endl;
+			}
 
+		else
+			{
+			cout << "Vklad nebol uspesny !" << endl;
+			}
+				
+			
+
+			
+				
+			
 		}
 
 		if (klavesnica == 6)

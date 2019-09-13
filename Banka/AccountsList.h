@@ -14,17 +14,18 @@ class AccountsList
 {
 
 	
-private:
+   private:
 
 
 	string meno;
 	Ucet u;
 	vector <Ucet*> zoznamUctov;
 
-public:
+  public:
 
 
-	AccountsList();
+	
+	  AccountsList()= default;
 	void pridajUcet(Ucet *u);
 	void vypisUcty();
 	bool zrusUcet(int cislo);

@@ -2,10 +2,7 @@
 
 
 
-AccountsList::AccountsList()
-{
-	
-}
+
 
 void AccountsList::pridajUcet(Ucet *u)
 {
@@ -95,8 +92,7 @@ bool AccountsList::vlozPeniaze(int cislo, int suma)
 
 		if (zoznamUctov[i]->getCislo() == cislo)
 		{
-			delete zoznamUctov[i];
-			zoznamUctov.erase(zoznamUctov.begin() + i);// zoznamUctov.erase(i) nefungovalo!!!
+			zoznamUctov[i]->getZostatokk() += suma;
 
 			pom = true;
 			return pom;

@@ -50,7 +50,7 @@ float Ucet::zadajSadzbu()
 	return sadzba;
 }
 
-unsigned int Ucet::getZostatok()
+unsigned int &Ucet::getZostatokk()
 {
 	return this->zostatok;
 }
@@ -109,6 +109,11 @@ Ucet::currency Ucet::vyberMeny()
 	}
 
 	
+}
+
+unsigned int Ucet::getZostatok()
+{
+	return this->zostatok;
 }
 
 

@@ -36,9 +36,11 @@ public :
 	};
 
 	Ucet() = default;
-	Ucet(typUctu typ_,  int cislo_, string meno_,
+	
+	Ucet(typUctu typ_, int cislo_, string meno_,
 		string priezvisko_, unsigned int zostatok_, currency mena_);
-
+	
+	
 
 	virtual typUctu getTyp();
 	virtual  int getCislo();
@@ -52,6 +54,8 @@ public :
 	 int cisloUctu();
 
 	currency vyberMeny();
+
+	unsigned int& getZostatokk();
 	
 	
 
