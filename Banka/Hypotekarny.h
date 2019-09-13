@@ -8,14 +8,6 @@ public:
 	float sadzba;
 	int fixacia;
 
-
-
-
-
-
-
-
-
 	Hypotekarny(typUctu typ_,  int cislo_, string meno_,
 		string priezvisko_, unsigned int zostatok_, currency mena_, float sadzba_, int fixacia_) :Ucet(typ_, cislo_, meno_, priezvisko_
 			, zostatok_, mena_)
@@ -24,6 +16,8 @@ public:
 		this->sadzba = sadzba_;
 	}
 
+	float getSadzba();
+	int getFixacia();
 
 };
 

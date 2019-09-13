@@ -22,10 +22,12 @@ public:
 	{
 		this->preriodicita = periodicita_;
 		this->sadzba = sadzba_;
+
 	}
 
 
 	float getSadzba();
+	int getPeriodicita();
 
 };
 
