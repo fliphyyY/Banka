@@ -17,7 +17,7 @@ int main()
 	int klavesnica = 0;
 	AccountsList *zoznam = new AccountsList();
 	
-	while (klavesnica != 7)
+	while (klavesnica != 9)
 	{
 
 	
@@ -27,6 +27,8 @@ int main()
 		cout << "4. Vyber z uctu" << endl;
 		cout << "5. Vypis zostatku na ucte" << endl;
 		cout << "6. Vypis vsetkych uctov" << endl;
+		cout << "7. Vypocet urokov na sporiacom ucte" << endl;
+		cout << "8. Vypocet urokov na terminovanom ucete" << endl;
 		cout << "Vasa volba: ";		
 		cin >> klavesnica;
 
@@ -196,12 +198,54 @@ int main()
 		
 		}
 
-		if (klavesnica == 6)
+		else if (klavesnica == 6)
 		{
 			cout << endl;
 			zoznam->vypisUcty();
 		}
 
+		else if (klavesnica == 7)
+		{
+			float pom;
+			int cislo;
+			cout << "Zadajte cislo uctu pre vypocet uroku: ";
+			cin >> cislo;
+
+			pom = zoznam->urokySporiaci(cislo);
+			if (pom != -1)
+			{
+
+				cout << "Urok je " << pom  << endl;
+			}
+
+			else
+			{
+				cout << "Ucet nebol najdeny." << endl;
+			}
+		}
+
+		else if (klavesnica == 8)
+		{
+
+			float pom;
+			int cislo;
+			cout << "Zadajte cislo terminovaneho uctu pre vypocet uroku: ";
+			cin >> cislo;
+
+			pom = zoznam->urokTerminovany(cislo);
+			if (pom != -1)
+			{
+
+				cout << "Urok je " << pom << endl;
+			}
+
+			else
+			{
+				cout << "Ucet nebol najdeny." << endl;
+			}
+
+
+		}
 		
 	}
 

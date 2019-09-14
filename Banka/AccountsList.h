@@ -31,7 +31,9 @@ class AccountsList
 	bool zrusUcet(int cislo);
 	bool vlozPeniaze(int cislo, int suma);
 	bool vyberPeniaze(int cislo, int suma);
-	 int vypisZostatok(int cislo);
+	int vypisZostatok(int cislo);
+	float urokySporiaci(int cislo);
+	float urokTerminovany(int cislo);
 
 
 	

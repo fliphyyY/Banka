@@ -39,7 +39,7 @@ void AccountsList::vypisUcty()
 		else if (var->getTyp() == u.terminovany)
 		{
 			Terminovany* t = static_cast<Terminovany*>(var);
-			cout << "Vysko urokovej sadzby: " << t->getSadzba() << " %" << endl;
+			cout << "Vyska urokovej sadzby: " << t->getSadzba() << " %" << endl;
 			cout <<"Periodicita pripisovania urokov v mesiacoch: " <<  t->getPeriodicita() << endl;
 			
 		}
@@ -174,3 +174,56 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 
 	return -1;
 }
+
+ float AccountsList::urokySporiaci(int cislo)
+ {
+	 float sadzba;
+	 int zostatok;
+	 float urok;
+	 for (int i = 0; i < zoznamUctov.size(); i++)
+	 {
+		 if (zoznamUctov[i]->getCislo() == cislo)
+		 {
+
+			 Sporiaci* t = static_cast<Sporiaci*>(zoznamUctov[i]);
+			 zostatok = t->getZostatokk();
+			 sadzba = t->getSadzba();
+			 urok = (zostatok * (sadzba / 100));
+			 return urok;
+
+		 }	
+	 }
+
+	 return -1;
+ }
+
+ float AccountsList::urokTerminovany(int cislo)
+ {
+
+	 float sadzba;
+	 int zostatok;
+	 float urok = 0;
+	 for (int i = 0; i < zoznamUctov.size(); i++)
+	 {
+		 if (zoznamUctov[i]->getCislo() == cislo)
+		 {
+
+			 Terminovany* t = static_cast<Terminovany*>(zoznamUctov[i]);
+		
+			 zostatok = t->getZostatokk();
+			 sadzba = t->getSadzba();
+			 
+
+			 for (int i = 1; i <= t->getPeriodicita(); i++)
+			 {
+				urok += (zostatok * (sadzba / 100));
+				zostatok += urok;
+			 }
+		
+			 return urok;
+
+		 }
+	 }
+
+	 return -1;
+ }
