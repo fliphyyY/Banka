@@ -169,10 +169,6 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 
 		}
 
-		
-			
-		
-
 
 	}
 

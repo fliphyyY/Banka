@@ -20,7 +20,7 @@ int main()
 	while (klavesnica != 7)
 	{
 
-		cout << "------------------------------------------Vitajte v menu-------------------------------------------" << endl;
+	
 		cout << "1. Vytvorenie uctu" << endl;
 		cout << "2. Zrusenie uctu" << endl;
 		cout << "3. Vklad na ucet" << endl;
