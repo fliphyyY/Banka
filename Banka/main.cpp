@@ -25,6 +25,7 @@ int main()
 		cout << "2. Zrusenie uctu" << endl;
 		cout << "3. Vklad na ucet" << endl;
 		cout << "4. Vyber z uctu" << endl;
+		cout << "5. Vypis zostatku na ucte" << endl;
 		cout << "6. Vypis vsetkych uctov" << endl;
 		cout << "Vasa volba: ";		
 		cin >> klavesnica;
@@ -133,16 +134,66 @@ int main()
 				cout << "Vklad bol uspesny !" << endl;
 			}
 
-		else
+			else
 			{
 			cout << "Vklad nebol uspesny !" << endl;
 			}
-				
+
+		}
+
+
+		else if (klavesnica == 4)
+		{
+
+		int cislo;
+		int suma;
+		system("cls");
+		cout << endl;
+		zoznam->vypisUcty();
+
+		cout << "Zadajte cislo uctu z ktoreho chcete vybrat peniaze: ";
+		cin >> cislo;
+		cout << "Zadajte sumu: ";
+		cin >> suma;
+		if (zoznam->vyberPeniaze(cislo, suma))
+		{
+			cout << "Vyber bol uspesny !" << endl;
+		}
+
+		else
+		{
+			cout << "Vyber nebol uspesny !" << endl;
+		}
+
+		}
+
+
+		if (klavesnica == 5)
+		{
+
+			unsigned int pom;
+			int cislo;
+			system("cls");
+			cout << endl;
 			
 
-			
+			cout << "Zadajte cislo uctu pre vypis zostatku: ";
+			cin >> cislo;
+
+			pom = zoznam->vypisZostatok(cislo);
+			if (pom != -1)
+			{
+
+				cout << "Zostatok na ucete je: " << pom << endl;
+			}
 				
+			else
+			{
+				cout << "Ucet nebol najdeny" << endl;
+			}
 			
+
+		
 		}
 
 		if (klavesnica == 6)

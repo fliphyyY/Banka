@@ -92,8 +92,16 @@ bool AccountsList::vlozPeniaze(int cislo, int suma)
 
 		if (zoznamUctov[i]->getCislo() == cislo)
 		{
-			zoznamUctov[i]->getZostatokk() += suma;
 
+			
+			zoznamUctov[i]->getZostatokk() += suma;
+			if (zoznamUctov[i]->getTyp() == u.bezny)
+			{
+
+				Osobny* t = static_cast<Osobny*>(zoznamUctov[i]);
+				t->zvysOperacie();
+				
+			}
 			pom = true;
 			return pom;
 		}
@@ -103,4 +111,70 @@ bool AccountsList::vlozPeniaze(int cislo, int suma)
 
 	return pom;
 
+}
+
+bool AccountsList::vyberPeniaze(int cislo, int suma)
+{
+
+	bool pom = false;
+	for (int i = 0; i < zoznamUctov.size(); i++)
+	{
+
+
+
+		if (zoznamUctov[i]->getCislo() == cislo)
+		{
+
+			
+
+			if (zoznamUctov[i]->getZostatokk() >= suma)
+			{
+				zoznamUctov[i]->getZostatokk() -= suma;
+
+				if (zoznamUctov[i]->getTyp() == u.bezny)
+				{
+
+					Osobny* t = static_cast<Osobny*>(zoznamUctov[i]);
+					t->zvysOperacie();
+
+				}
+				pom = true;
+				return pom;
+			}
+			
+
+			
+		}
+
+
+	}
+
+	return pom;
+
+}
+
+ int AccountsList::vypisZostatok(int cislo)
+{
+	
+	for (int i = 0; i < zoznamUctov.size(); i++)
+	{
+
+
+
+		if (zoznamUctov[i]->getCislo() == cislo)
+		{
+
+			return zoznamUctov[i]->getZostatokk();
+		
+
+		}
+
+		
+			
+		
+
+
+	}
+
+	return -1;
 }

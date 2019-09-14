@@ -14,6 +14,7 @@ public:
 	}
 
 	unsigned int getOperacie();
+	 void zvysOperacie();
 
 private:
 	unsigned int operacie;

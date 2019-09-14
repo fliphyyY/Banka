@@ -4,3 +4,9 @@ unsigned int Osobny::getOperacie()
 {
 	return this->operacie;
 }
+
+void Osobny::zvysOperacie()
+{
+	operacie++;
+
+}

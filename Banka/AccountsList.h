@@ -30,6 +30,8 @@ class AccountsList
 	void vypisUcty();
 	bool zrusUcet(int cislo);
 	bool vlozPeniaze(int cislo, int suma);
+	bool vyberPeniaze(int cislo, int suma);
+	 int vypisZostatok(int cislo);
 
 
 	
