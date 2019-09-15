@@ -1,9 +1,5 @@
 #include "AccountsList.h"
 
-
-
-
-
 void AccountsList::pridajUcet(Ucet *u)
 {
 	this->zoznamUctov.push_back(u);
@@ -26,7 +22,7 @@ void AccountsList::vypisUcty()
 		cout <<"Ucet je vedeny v mene: "<< nazovMeny << endl;
 		if (var->getTyp() == u.bezny)
 		{
-			Osobny *t = static_cast<Osobny*>(var);
+			Osobny *t = static_cast<Osobny*>(var); // pretypovanie na zdedenu triedu
 			cout <<"Pocet operacii: "<< t->getOperacie()<< endl;
 		}
 
@@ -94,11 +90,11 @@ bool AccountsList::vlozPeniaze(int cislo, int suma)
 		{
 
 			
-			zoznamUctov[i]->getZostatokk() += suma;
+			zoznamUctov[i]->getZostatok() += suma;
 			if (zoznamUctov[i]->getTyp() == u.bezny)
 			{
 
-				Osobny* t = static_cast<Osobny*>(zoznamUctov[i]);
+				Osobny* t = static_cast<Osobny*>(zoznamUctov[i]); // pretypovanie na zdedenu triedu
 				t->zvysOperacie();
 				
 			}
@@ -127,9 +123,9 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 
 			
 
-			if (zoznamUctov[i]->getZostatokk() >= suma)
+			if (zoznamUctov[i]->getZostatok() >= suma)
 			{
-				zoznamUctov[i]->getZostatokk() -= suma;
+				zoznamUctov[i]->getZostatok() -= suma;
 
 				if (zoznamUctov[i]->getTyp() == u.bezny)
 				{
@@ -164,7 +160,7 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 		if (zoznamUctov[i]->getCislo() == cislo)
 		{
 
-			return zoznamUctov[i]->getZostatokk();
+			return zoznamUctov[i]->getZostatok();
 		
 
 		}
@@ -186,7 +182,7 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 		 {
 
 			 Sporiaci* t = static_cast<Sporiaci*>(zoznamUctov[i]);
-			 zostatok = t->getZostatokk();
+			 zostatok = t->getZostatok();
 			 sadzba = t->getSadzba();
 			 urok = (zostatok * (sadzba / 100));
 			 return urok;
@@ -210,7 +206,7 @@ bool AccountsList::vyberPeniaze(int cislo, int suma)
 
 			 Terminovany* t = static_cast<Terminovany*>(zoznamUctov[i]);
 		
-			 zostatok = t->getZostatokk();
+			 zostatok = t->getZostatok();
 			 sadzba = t->getSadzba();
 			 
 

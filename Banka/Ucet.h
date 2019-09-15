@@ -47,7 +47,7 @@ public :
 	virtual string getMeno();
 	virtual string getPriezvisko();
 	virtual float zadajSadzbu();
-	virtual unsigned int getZostatok();
+	
 
 	virtual currency getMena();
 
@@ -55,7 +55,7 @@ public :
 
 	currency vyberMeny();
 
-	unsigned int& getZostatokk();
+	unsigned int& getZostatok();
 	
 	
 

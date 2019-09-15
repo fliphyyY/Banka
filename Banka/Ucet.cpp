@@ -50,7 +50,7 @@ float Ucet::zadajSadzbu()
 	return sadzba;
 }
 
-unsigned int &Ucet::getZostatokk()
+unsigned int &Ucet::getZostatok()
 {
 	return this->zostatok;
 }
@@ -83,38 +83,44 @@ Ucet::currency Ucet::vyberMeny()
 	cout << "Zadajte menu: ";
 	cin >> volba;
 
-	if (volba == 1)
+
+	switch (volba)
 	{
+
+		case 1:
+		
 		return EUR;
-	}
+		break;
 
-	else if (volba == 2)
-	{
+		case 2:
+		
 		return CZK;
-	}	
+		break;
+		
 
-	else if (volba == 3)
-	{
+		case 3:		
 		return GBP;
-	}
+		break;
+		
 
-	else if (volba == 4)
-	{
+		case 4:
+		
 		return USD;
-	}
+		break;
+		
 
-	else if (volba == 5)
-	{
+		case 5:
+		
 		return RUB;
+		break;
+		
+		default:
+		system("cls");
+		vyberMeny();
 	}
-
-	
 }
 
-unsigned int Ucet::getZostatok()
-{
-	return this->zostatok;
-}
+
 
 
 
